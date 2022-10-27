@@ -13,6 +13,8 @@ extension-element-prefixes="spinque">
 
 	<xsl:output method="text" encoding="UTF-8"/>
 
+	<!-- In bewerking -->
+
 	<xsl:template match="record | metadata | europeana:record">
 		<xsl:if test="(dc:type = 'Foto') or contains(dc:type, 'Boek') or contains(dc:type, 'Krant') or contains(dc:type, 'Bouwtekening')">
 			<xsl:variable name="subject" select="su:uri(europeana:isShownAt)"/>
